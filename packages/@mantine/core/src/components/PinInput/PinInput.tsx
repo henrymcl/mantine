@@ -178,6 +178,7 @@ export const PinInput = factory<PinInputFactory>((props, ref) => {
     id,
     hiddenInputProps,
     rootRef,
+    required,
     ...others
   } = useProps('PinInput', defaultProps, props);
 
@@ -403,6 +404,7 @@ export const PinInput = factory<PinInputFactory>((props, ref) => {
             radius={radius}
             error={error}
             variant={variant}
+            required={required}
             disabled={disabled}
             ref={(node) => {
               index === 0 && assignRef(ref, node);
